@@ -12,6 +12,10 @@ import {
   View
 } from 'react-native';
 
+import {NativeModules} from 'react-native';
+var CalendarManager = NativeModules.CalendarManager;
+CalendarManager.addEvent('Birthday Party', '4 Privet Drive, Surrey');
+
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
     'Cmd+D or shake for dev menu',
