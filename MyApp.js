@@ -7,12 +7,19 @@ import {
     Dimensions,
     TouchableOpacity,
 } from 'react-native';
-import MapView from './MapView'
+import MapView from './src/MapView'
 
 export default class MyApp extends Component {
 
+
     render() {
-        return <MapView style={{ flex: 1 }} />;
+    var region = {
+    latitude: 39.9047253699,
+    longitude: 116.407215498,
+    latitudeDelta: 0.1,
+    longitudeDelta: 0.1,
+    };
+        return <MapView region={region} pitchEnabled={false} style={{ flex: 1 }} />;
     }
 }
 
